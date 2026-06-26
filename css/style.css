@@ -14,7 +14,113 @@
 html {
   color: #222;
   font-size: 1em;
+  font-family: sans-serif;
   line-height: 1.4;
+}
+
+h1{
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.calculator-body{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.calculator{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.number{
+  flex: 0 0 33%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+
+}
+
+#result{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #222222;
+  width: 50vw;
+  height: 10vh;
+  font-size: calc(10px + 2vw);
+  color: greenyellow;
+}
+
+.buttons-numbers{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-evenly;
+  width: 30vw;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.buttons-operators{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  width: 20vw;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.numbers{
+  display: flex;
+  flex-direction: row;
+}
+
+#clear-all{
+  flex: 0 0 50%;
+  justify-content: center;
+}
+
+#clear-left{
+  flex: 0 0 50%;
+  width: 15vw;
+  background-color: coral;
+  justify-content: center;
+}
+
+.button{
+  display: flex;
+  background-color: #222222;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.operator{
+  flex: 0 0 33%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+#equal{
+  background-color: #222222;
+  color: white;
 }
 
 /*

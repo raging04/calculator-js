@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" xmlns="http://www.w3.org/1999/html">
 
 <head>
   <meta charset="utf-8">
@@ -25,8 +25,43 @@
 <body>
 
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+
+  <h1>Hello! This is a calculator.</h1>
+
+  <div class="calculator">
+    <div id="result">
+      <p id="display"></p>
+    </div>
+    <div class="calculator-body">
+      <div class="buttons-numbers">
+        <button class="button" id="clear-all" onclick="clearDisplay()">AC</button>
+        <button class="button" id="clear-left" onclick="clearLeft()">C</button>
+        <button class="number" id="seven" onclick="appendNumber(7)">7</button>
+        <button class="number" id="eight" onclick="appendNumber(8)">8</button>
+        <button class="number" id="nine" onclick="appendNumber(9)">9</button>
+        <button class="number" id="four" onclick="appendNumber(4)">4</button>
+        <button class="number" id="five" onclick="appendNumber(5)">5</button>
+        <button class="number" id="six" onclick="appendNumber(6)" >6</button>
+        <button class="number" id="one" onclick="appendNumber(1)">1</button>
+        <button class="number" id="two" onclick="appendNumber(2)">2</button>
+        <button class="number" id="three" onclick="appendNumber(3)">3</button>
+        <button class="number" id="zero" onclick="appendNumber(0)" >0</button>
+        <button class="number" id="point" onclick="appendNumber('.')" >.</button>
+      </div>
+
+      <div class="buttons-operators">
+        <button class="operator" id="plus" onclick="getOperator('plus')">+</button>
+        <button class="operator" id="minus" onclick="getOperator('minus')">-</button>
+        <button class="operator" id="division" onclick="getOperator('division')">/</button>
+        <button class="operator" id="multiplication" onclick="getOperator('multiplication')">x</button>
+        <button class="operator" id="equal" onclick="operate(undefined,getNumber(),undefined)">=</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="js/app.js" defer></script>
 
 </body>
 
