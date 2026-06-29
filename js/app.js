@@ -1,3 +1,9 @@
+/**
+ *
+ * Calculator Object: Receives two numbers and operates on them.
+ *
+ * @type {{add: function(*, *): number, subtract: function(*, *): number, multiply: function(*, *): number, divide: function(*, *): number}}
+ */
 const calculator = {
   add: function(num1, num2) {
     return Math.round(num1 + num2);
@@ -14,11 +20,18 @@ const calculator = {
 }
 
 let display = document.getElementById("display");
-
 let number;
 let operator = "";
 let in_operation = false;
 let operation_pressed = false;
+
+addEventListener('keydown', function(e) {
+  if (e.code.includes("Digit")) {
+    appendNumber(e.key)
+  } else if (e.code.includes("Period") && !display.textContent.includes('.')) {
+    appendNumber(e.key)
+  }
+})
 
 function clearDisplay() {
   display.textContent = "";
@@ -33,14 +46,13 @@ function checkDecimal() {
 }
 
 function appendNumber(num) {
-  checkDecimal()
-
   if(!in_operation) {
     clearDisplay();
     in_operation = true ;
     document.getElementById("equal").disabled = false;
   }
   display.textContent += num;
+  checkDecimal()
 }
 
 function getNumber() {
